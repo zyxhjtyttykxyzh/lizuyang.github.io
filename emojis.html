@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>表情包合集</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		.emoji-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+		.emoji-grid img{width:100%;aspect-ratio:1/1;object-fit:contain;border:1px solid var(--border);border-radius:10px;background:#fff}
+		@media (max-width:900px){.emoji-grid{grid-template-columns:repeat(3,1fr)}}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<div class="container nav">
+			<a class="brand" href="index.html"><span>瓷光集</span></a>
+			<nav>
+				<ul>
+					<li><a href="characters.html">人物小传</a></li>
+					<li><a href="story.html">三人故事</a></li>
+					<li><a href="products.html">文创周边</a></li>
+					<li><a href="emojis.html">表情包</a></li>
+					<li class="cart-pill"><a href="checkout.html">购物车 <span class="cart-count" data-cart-count>0</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="section">
+		<div class="container">
+			<h1>表情包</h1>
+			<p class="subtle">将你的素材放进 `assets/images/emoji/` 目录，按“角色_编号.png”命名即可自动替换占位。</p>
+			<div class="emoji-grid">
+				<img src="assets/images/emoji/taotao_01.png" alt="陶陶" onerror="this.style.opacity=.2">
+				<img src="assets/images/emoji/taotao_02.png" alt="陶陶" onerror="this.style.opacity=.2">
+				<img src="assets/images/emoji/sisi_01.png" alt="思思" onerror="this.style.opacity=.2">
+				<img src="assets/images/emoji/sisi_02.png" alt="思思" onerror="this.style.opacity=.2">
+				<img src="assets/images/emoji/qiqi_01.png" alt="琦琦" onerror="this.style.opacity=.2">
+				<img src="assets/images/emoji/qiqi_02.png" alt="琦琦" onerror="this.style.opacity=.2">
+				<img src="assets/images/emoji/taotao_03.png" alt="陶陶" onerror="this.style.opacity=.2">
+				<img src="assets/images/emoji/sisi_03.png" alt="思思" onerror="this.style.opacity=.2">
+				<img src="assets/images/emoji/qiqi_03.png" alt="琦琦" onerror="this.style.opacity=.2">
+				<img src="assets/images/emoji/taotao_04.png" alt="陶陶" onerror="this.style.opacity=.2">
+				<img src="assets/images/emoji/sisi_04.png" alt="思思" onerror="this.style.opacity=.2">
+				<img src="assets/images/emoji/qiqi_04.png" alt="琦琦" onerror="this.style.opacity=.2">
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+			<div>© 瓷光集</div>
+			<div class="links">
+				<a href="support.html">售后服务</a>
+				<a href="emojis.html">表情包</a>
+			</div>
+		</div>
+	</footer>
+	<script src="app.js"></script>
+</body>
+</html>
