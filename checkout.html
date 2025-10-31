@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>结算与支付</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="checkout">
+	<header class="header">
+		<div class="container nav">
+			<a class="brand" href="index.html"><span>瓷光集</span></a>
+			<nav>
+				<ul>
+					<li><a href="characters.html">人物小传</a></li>
+					<li><a href="story.html">三人故事</a></li>
+					<li><a href="products.html">文创周边</a></li>
+					<li><a href="emojis.html">表情包</a></li>
+					<li class="cart-pill"><a href="checkout.html">购物车 <span class="cart-count" data-cart-count>0</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="section">
+		<div class="container">
+			<h1>结算与支付</h1>
+			<div id="pay-success" class="card" style="display:none;border-color:#c6f6d5;background:#f0fff4">
+				<div class="body"><strong>支付成功</strong>：感谢你的支持！订单已生成（模拟）。</div>
+			</div>
+			<div class="grid" style="grid-template-columns:2fr 1fr;gap:24px">
+				<section class="card">
+					<div class="body">
+						<h2>购物车</h2>
+						<table class="table">
+							<thead>
+								<tr><th>商品</th><th>单价</th><th>数量</th><th>小计</th><th></th></tr>
+							</thead>
+							<tbody id="cart-body"></tbody>
+						</table>
+					</div>
+				</section>
+				<aside class="card">
+					<div class="body">
+						<h2>支付信息</h2>
+						<form id="checkout-form" class="form">
+							<div class="input"><label>收货人</label><input required placeholder="姓名"></div>
+							<div class="input"><label>联系电话</label><input required placeholder="手机号码"></div>
+							<div class="input"><label>收货地址</label><input required placeholder="省市区 + 详细地址"></div>
+							<div class="input"><label>支付方式</label>
+								<select required>
+									<option value="wechat">微信支付（模拟）</option>
+									<option value="alipay">支付宝（模拟）</option>
+								</select>
+							</div>
+							<div class="input"><label>备注</label><textarea rows="3" placeholder="选填"></textarea></div>
+							<div style="display:flex;align-items:center;justify-content:space-between">
+								<div>应付合计：<strong id="cart-total">¥0.00</strong></div>
+								<button type="submit" class="btn primary">支付</button>
+							</div>
+						</form>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+			<div>© 瓷光集</div>
+			<div class="links">
+				<a href="support.html">售后服务</a>
+				<a href="emojis.html">表情包</a>
+			</div>
+		</div>
+	</footer>
+	<script src="app.js"></script>
+</body>
+</html>
