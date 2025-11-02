@@ -12,9 +12,10 @@
 			<a class="brand" href="index.html"><span>瓷光集</span></a>
 			<nav>
 				<ul>
+					<li><a href="index.html">首页</a></li>
 					<li><a href="characters.html">人物小传</a></li>
-					<li><a href="story.html">三人故事</a></li>
-					<li><a href="products.html">文创周边</a></li>
+					<li><a href="story.html">故事集</a></li>
+					<li><a href="products.html">周边</a></li>
 					<li><a href="emojis.html">表情包</a></li>
 					<li class="cart-pill"><a href="checkout.html">购物车 <span class="cart-count" data-cart-count>0</span></a></li>
 				</ul>
@@ -23,11 +24,20 @@
 	</header>
 
 	<main>
-		<section class="hero" style="background:url('sisi.png') center/cover no-repeat;">
+		<section class="hero">
+			<div class="hero-carousel">
+				<div class="carousel-slide active" style="background-image:url('images/sisi.png')"></div>
+				<div class="carousel-slide" style="background-image:url('images/qiqi.jpg')"></div>
+				<div class="carousel-slide" style="background-image:url('images/taotao.jpg')"></div>
+			</div>
+			<div class="carousel-controls">
+				<button class="carousel-btn carousel-btn-prev" aria-label="上一张">‹</button>
+				<button class="carousel-btn carousel-btn-next" aria-label="下一张">›</button>
+			</div>
 			<div class="container hero-inner">
 				<div>
 					<div class="kicker">来自瓷火的温度</div>
-					<h1>遇见陶陶、思思、琦琦</h1>
+					<h1>遇见陶思琦</h1>
 					<p class="subtle">跨越千年的新生之旅，从这里开始。</p>
 					<div class="cta-group">
 						<a class="btn primary" href="products.html">选购文创</a>
@@ -35,40 +45,42 @@
 					</div>
 				</div>
 				<div>
-					<div class="banner"></div>
+					<div class="banner">
+						<img src="images/qiqi.jpg" alt="琦琦" style="width:100%;height:100%;object-fit:cover">
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="section">
 			<div class="container">
-				<h2>她们是谁？</h2>
+				<h2>她们是谁?</h2>
 				<p class="subtle">三位IP的性格与年代烙印一览</p>
 				<div class="grid cols-3">
 					<div class="card">
-						<img src="taotao.jpg" alt="陶陶" onerror="this.style.opacity=.2">
+						<img src="images/taotao.jpg" alt="钟陶陶" onerror="this.style.opacity=.2">
 						<div class="body">
-							<span class="badge">青花 · 明代气韵</span>
-							<h3>陶陶</h3>
-							<p class="subtle">开朗外向、热心如火，迷恋手作与市井烟火；从被期望的匠家继承人走向自我创作的转身。</p>
+							<span class="badge">18世纪西洋瓷胎飞仙人钟</span>
+							<h3>钟陶陶</h3>
+							<p class="subtle">瓷雕飞仙裙摆飘逸，钟身绘着洛可可花纹，对中国文化充满好奇，说话带着点跳脱的洋派腔调，跟着商船往返过丝路。</p>
 							<a class="btn" href="characters.html#taotao">了解陶陶</a>
 						</div>
 					</div>
 					<div class="card">
-						<img src="sisi.png" alt="思思" onerror="this.style.opacity=.2">
+						<img src="images/sisi.png" alt="白思思" onerror="this.style.opacity=.2">
 						<div class="body">
-							<span class="badge">素瓷 · 宋代气质</span>
-							<h3>思思</h3>
-							<p class="subtle">内敛沉静、理性周密，爱读史与写日记；在一次守护古窑的行动中找到坚持的答案。</p>
+							<span class="badge">北宋定窑白瓷瓶</span>
+							<h3>白思思</h3>
+							<p class="subtle">釉色莹白如脂，气质温婉沉静，像位饱读诗书的江南女子，亲历过古代陆上丝路。</p>
 							<a class="btn" href="characters.html#sisi">了解思思</a>
 						</div>
 					</div>
 					<div class="card">
-						<img src="qiqi.jpg" alt="琦琦" onerror="this.style.opacity=.2">
+						<img src="images/qiqi.jpg" alt="苏琦琦" onerror="this.style.opacity=.2">
 						<div class="body">
-							<span class="badge">釉彩 · 清代灵动</span>
-							<h3>琦琦</h3>
-							<p class="subtle">灵感过载、古灵精怪，酷爱配色与涂鸦；在舞台失误后以创意重返掌声。</p>
+							<span class="badge">清代乾隆珐琅彩瓷瓶</span>
+							<h3>苏琦琦</h3>
+							<p class="subtle">满身缠枝莲与西洋花卉纹，色彩浓艳华贵，带着皇城贵女的娇俏，却因困于深宫从未踏出京城走上古丝绸之路。</p>
 							<a class="btn" href="characters.html#qiqi">了解琦琦</a>
 						</div>
 					</div>
@@ -77,6 +89,17 @@
 		</section>
 
 		<section class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+			<div class="container">
+				<h2>她们如何而来？</h2>
+				<div class="origin-content">
+					<p>瓷器是文明的掌纹，丝路是串起掌纹的织机。当宋白瓷、清珐琅彩、洋瓷胎钟化身为白思思、苏琦琦、钟陶陶重行新丝路，沉睡的文明记忆便在当代经纬里注入了新的活力。</p>
+					<p>白思思承宋瓷素净，以古丝路远播东方雅韵，今以"静"遇新丝路之"动"，舒展东方审美的根脉；苏琦琦携珐琅彩交融，以古丝路碰撞多样文明，今以"盛"续新丝路之"和"，流转多元共生的基因；钟陶陶衔洋瓷钟跨界，以古丝路发出中外合鸣的先声，今以"奇"生新丝路之"联"，共振文明互鉴的新声。</p>
+					<p>以人格化IP为引，让文物从"陈列的过往"化为"行走的当下"，在新丝路织就古与今、中与外、器与心的鲜活相逢!</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
 			<div class="container">
 				<h2>人气周边上新</h2>
 				<p class="subtle">杯、袋、挂件与拼图，灵感都来自她们的故事</p>
