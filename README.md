@@ -46,9 +46,9 @@
 └─ assets/
    └─ images/
       ├─ trio-hero.jpg (自备)
-      ├─ taotao.png (自备)
+      ├─ taotao.jpg (自备)
       ├─ sisi.png (自备)
-      ├─ qiqi.png (自备)
+      ├─ qiqi.jpg (自备)
       ├─ products/ (自备)
       └─ emoji/ (自备)
 ```
