@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>三人故事（分幕）｜陶陶・思思・琦琦</title>
+	<title>故事集（分幕）｜陶陶・思思・琦琦</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,9 +12,10 @@
 			<a class="brand" href="index.html"><span>瓷光集</span></a>
 			<nav>
 				<ul>
+					<li><a href="index.html">首页</a></li>
 					<li><a href="characters.html">人物小传</a></li>
-					<li><a href="story.html">三人故事</a></li>
-					<li><a href="products.html">文创周边</a></li>
+					<li><a href="story.html">故事集</a></li>
+					<li><a href="products.html">周边</a></li>
 					<li><a href="emojis.html">表情包</a></li>
 					<li class="cart-pill"><a href="checkout.html">购物车 <span class="cart-count" data-cart-count>0</span></a></li>
 				</ul>
@@ -24,41 +25,99 @@
 
 	<main class="section">
 		<div class="container">
-			<h1>三人故事（分幕）</h1>
-			<p class="subtle">文案起点，可在此基础上继续润色与延展。</p>
+			<h1>故事集（分幕）</h1>
+			<p class="subtle">点击下方标题展开各幕内容</p>
 
-			<section class="card">
-				<div class="body">
-					<h2>第一幕｜窑火初醒</h2>
-					<p>古窑夜色，残星如釉点。一次跨时代的展演排练，让三段纹样在窑火余温中苏醒：青花的陶陶先听见水流，素瓷的思思看见留白间的风，釉彩的琦琦则被一束光逗笑。她们不认识彼此，只被城市的脚步声吸引，沿着各自的节奏走出窑口。</p>
+			<section class="story-card" data-scene="1">
+				<div class="story-header" onclick="toggleScene(1)">
+					<h2>第一幕：展柜里的遗憾</h2>
+					<span class="toggle-icon">▼</span>
+				</div>
+				<div class="story-content" id="scene-1">
+					<p><strong>时间：</strong>一带一路展览馆夜，闭馆前最后一刻</p>
+					<p>"丝路器物传奇"展厅，三个展柜并排而立，射灯勾勒出瓷器的光泽。</p>
+					<p>（展厅广播响起："闭馆时间已到，请各位观众有序离场。"脚步声渐远，最后一盏射灯暗下时，展柜里的三小只抖抖周身的疲惫化为人形）</p>
+					<p><strong>钟陶陶：</strong>（伸了个懒腰，钟摆"滴答"晃了两下）总算是人去楼空啦！白姐姐，你昨天说在北上时遇到了大风沙，后来怎么样了？</p>
+					<p><strong>白思思：</strong>（捂嘴浅浅地笑）陶陶，这不能叫"人去楼空"，那是贬义词。</p>
+					<p><strong>钟陶陶：</strong>（眨了眨眼睛，挪着小碎步向白瓷那边靠去）什么圆的扁的，先放放，白姐姐先讲讲丝路上的故事吧，我都等不及啦！</p>
+					<p><strong>白思思：</strong>（轻轻转动瓶身，白釉在暗光里泛着暖光）那是我离开家的第三天，我从包袱缝里看到外面黄沙漫天，天气也冷得刺骨，我和两个姐妹缩在一个包裹里，都怕极了，但为了国家出使北方，我一点也不后悔，骆驼载着我们，驼铃一步一晃，好在最后在尘暴来临前，我们侥幸走出了那片沙漠，不然你只能在沙漠遗址里见到我了。</p>
+					<p><strong>苏琦琦：</strong>（戳了戳展柜玻璃，有点委屈）白姐姐、钟妹妹都见过古丝绸之路的样子，我出生时被困在紫禁城，顶多听太监总管说两句"洋商来朝"。（晃了晃满身的花纹）我这身上的西洋彩，还是画师照着洋人的画儿画的，都没机会见到那时的丝绸之路。</p>
+					<p><strong>钟陶陶：</strong>（飞仙瓷雕的手轻轻拍了拍钟身，像是在安慰）别难过呀！今非昔比了，听说"一带一路"让古丝绸之路变得更热闹了！要不……咱们趁周一闭馆，来个citywalk？</p>
+					<p><strong>白思思：</strong>（微微一愣，随即笑了）这次成语用得不错，主意也好，我真想瞧瞧，当年我们走过的路，如今变成了什么样。</p>
+					<p><strong>苏琦琦：</strong>（眼睛亮得像釉上的金彩）那咱们就去！</p>
+					<p><strong>钟陶陶：</strong>我早就看过了，闭馆后展厅有个侧门，顺着那出去我们就是免费的！</p>
+					<p><strong>苏琦琦：</strong>（笑得前仰后合）什么免费的，是自由的吧？真有你的，陶陶。</p>
+					<p><strong>钟陶陶：</strong>（不好意思地笑）：Yes,free！</p>
+					<p>（远处传来保安的脚步声："最后检查一遍，明天闭馆可别留隐患。"三个小家伙赶紧屏住气，待脚步声远去，白思思轻轻一点展台，轻盈地落在地面，钟陶陶跟着"咕噜"滚下来，又伸手扶住苏琦琦。）</p>
+					<p><strong>白思思：</strong>走吧，我们去看看属于丝路的风景。</p>
 				</div>
 			</section>
 
-			<section class="card">
-				<div class="body">
-					<h2>第二幕｜各自奔跑</h2>
-					<p>陶陶在集市里摆摊修器，把旧物讲成新故事；思思在图书馆与遗址之间往返，为一座被遗忘的古窑写“简明读本”；琦琦误打误撞进了剧团，用色彩做灯光草图。她们都在与“期待”较劲：传承、效率、完美——这些词像看不见的釉面，时而保护、时而遮挡。</p>
+			<section class="story-card" data-scene="2">
+				<div class="story-header" onclick="toggleScene(2)">
+					<h2>第二幕：西安·丝路起点</h2>
+					<span class="toggle-icon">▼</span>
+				</div>
+				<div class="story-content" id="scene-2">
+					<p><strong>时间：</strong>深夜，西安大唐不夜城旁</p>
+					<p>灯火璀璨的西安城墙下，远处高铁呼啸而过，与古城墙相映成趣。</p>
+					<p>（三个小家伙站在西安城墙下的花丛前）</p>
+					<p><strong>苏琦琦：</strong>哇！这就是丝路起点？比紫禁城的城墙还气派！那一闪而过的是高铁，可气派了，跑得比马快多了！</p>
+					<p><strong>白思思：</strong>（望着高铁的方向，眼里满是感慨）高铁是现在"新丝路"交通工具。我当年从长安出发时，商队要走半年才到敦煌，如今坐这个，几个时辰就能到了。</p>
+					<p><strong>钟陶陶：</strong>（指着不夜城里的丝路主题灯光秀）你看那儿！有骆驼商队，还有咱们瓷器的图案！现在的人，还在讲着丝路的故事呢。</p>
+					<p>（一群游客举着手机拍照，镜头扫过花丛，三个只俏皮地向着镜头做鬼脸。待人群散去，苏琦琦摸了摸城墙砖，指尖沾了点夜露。）</p>
+					<p><strong>苏琦琦：</strong>原来这就是起点的风，比皇城的风，自由多了。</p>
 				</div>
 			</section>
 
-			<section class="card">
-				<div class="body">
-					<h2>第三幕｜裂纹与金线</h2>
-					<p>一次突如其来的风波把她们卷到一起：古窑面临拆除，筹办的展演也被迫叫停。陶陶提议做一场“看得见的修复”，思思把调查做成展览动线，琦琦将裂痕描金，让破损成为叙事的高光。观众在裂纹旁驻足，第一次看见时间不是敌人。</p>
+			<section class="story-card" data-scene="3">
+				<div class="story-header" onclick="toggleScene(3)">
+					<h2>第三幕：敦煌·沙漠明珠</h2>
+					<span class="toggle-icon">▼</span>
+				</div>
+				<div class="story-content" id="scene-3">
+					<p><strong>时间：</strong>凌晨，敦煌莫高窟数字展示中心外</p>
+					<p>沙漠的星空下，莫高窟的轮廓隐约可见，旁边的数字中心屏幕上，正播放着数字化修复的壁画。</p>
+					<p>（钟陶陶的钟摆对着星空晃了晃，像是在计时。苏琦琦盯着屏幕里的壁画渐渐出神。）</p>
+					<p><strong>苏琦琦：</strong>那画上的飞天，和钟妹妹身上的好像！而且这画在闪闪发光耶！</p>
+					<p><strong>白思思：</strong>这是数字修复技术，能让千年前的壁画永远保存下来。我当年路过敦煌时，曾在石窟外见过画工用矿物颜料一笔笔描绘，但精美的壁画经不起风沙的侵蚀，如今有了更好的技术壁画就不用再怕风沙侵蚀了。</p>
+					<p><strong>钟陶陶：</strong>（凑近屏幕，飞仙瓷雕的脸贴在玻璃上）你看那幅"商旅图"，有咱们瓷器的影子！以前的丝路是把文化带出去，现在是把咱们的文化好好守着传承下去，再让全世界都看见！</p>
+					<p>（远处传来沙漠的风声，像是古老的驼铃声在回响。苏琦琦轻轻哼起了宫里听来的小调，白思思和钟陶陶跟着节奏晃着身子，月光洒在她们身上，瓷釉泛着温柔的光。）</p>
 				</div>
 			</section>
 
-			<section class="card">
-				<div class="body">
-					<h2>第四幕｜窑口合鸣</h2>
-					<p>展演重启的夜晚，古窑如舞台。陶陶的青花涌入城市烟火，思思的留白成为每个人都能填充的记忆，琦琦的色彩在屋檐下流动。掌声里，她们终于相视而笑：原来“我们”就是最完整的器形。</p>
+			<section class="story-card" data-scene="4">
+				<div class="story-header" onclick="toggleScene(4)">
+					<h2>第四幕：广州·海丝新港</h2>
+					<span class="toggle-icon">▼</span>
+				</div>
+				<div class="story-content" id="scene-4">
+					<p><strong>时间：</strong>清晨，广州南沙港</p>
+					<p>巨大的货轮停靠在码头，集装箱上印着"一带一路"标识，起重机有条不紊地工作，远处是林立的高楼。</p>
+					<p>（三个小家伙坐在码头的护栏上，海风拂过，苏琦琦的釉色在晨光里格外鲜艳。）</p>
+					<p><strong>苏琦琦：</strong>这港口比我想象的还要大！那些铁箱子里装的是什么？</p>
+					<p><strong>白思思：</strong>里面装着世界各地的货物呀！有中国的瓷器、丝绸，也有外国的特产，就像当年的商船，只是现在更快、更多了。（指着货轮上的"中国制造"字样）你看，咱们的瓷器现在还在走丝路，而且走得更远啦！</p>
+					<p><strong>钟陶陶：</strong>（望着远处的跨海大桥）我当年到广州港时，这里只有小渔船和木质商船，如今成了这么大的港口。丝路没变，还是连接着世界，只是换了更热闹的模样。</p>
+					<p><strong>苏琦琦：</strong>（突然红了眼眶，又赶紧擦掉）现在我不是生于皇城、困于皇城的瓷瓶了，我有了新时代丝绸之路的全新经历，以后我也能和展柜前的人们讲出自己的丝路故事了。</p>
 				</div>
 			</section>
 
-			<section class="card">
-				<div class="body">
-					<h2>尾声｜把时间戴在手上</h2>
-					<p>风波过后，三人以故事为模具，打造随身而行的器物：杯沿刻下窑口的经纬，布袋绣着遗址的编号，挂件里藏一条描金的裂线。若你愿意，它们会在日常里，继续讲述那些关于勇敢、克制与重生的细小光亮。</p>
+			<section class="story-card" data-scene="5">
+				<div class="story-header" onclick="toggleScene(5)">
+					<h2>第五幕：晨光里的回归</h2>
+					<span class="toggle-icon">▼</span>
+				</div>
+				<div class="story-content" id="scene-5">
+					<p><strong>时间：</strong>第二天清晨，展览馆开馆前</p>
+					<p>"丝路器物传奇"展厅，展柜里的射灯重新亮起。</p>
+					<p>三个小家伙悄悄回到展柜，苏琦琦身上还沾着一点沙漠的细沙，钟陶陶的钟摆比以前更有活力，白思思的白釉像是多了一层温润的光泽。</p>
+					<p><strong>保安（画外音）：</strong>开门喽，今天闭馆整理检查下展品。</p>
+					<p>（脚步声走近，三个小家伙赶紧"定"在原地，像是从未离开过。）</p>
+					<p><strong>保安：</strong>（检查展柜，笑着嘀咕）这几件宝贝，今天看着怎么更精神了？</p>
+					<p>展厅的门缓缓打开，第一波工作人员走进来，其中一个小姑娘停在展柜前，指着苏琦琦说："你看这珐琅彩瓶，以前总觉得它贵气里带着点冷清，今天怎么觉得它在笑呀？"</p>
+					<p>射灯下，苏琦琦的釉色流转，像是藏着一肚子的新故事。白思思轻轻"碰"了碰她的瓶身，钟陶陶的钟摆悄悄晃了一下，发出一声清脆的"滴答"，像是在说：下次，咱们再去看看更多的地方。</p>
+					<p>阳光透过展厅的窗户照进来，落在三件瓷器上，古老的丝路记忆与新的时代故事，在晨光里悄悄交融。</p>
+					<p><strong>（完）</strong></p>
 				</div>
 			</section>
 
@@ -74,6 +133,26 @@
 			</div>
 		</div>
 	</footer>
+	<script>
+		function toggleScene(num){
+			const card = document.querySelector(`[data-scene="${num}"]`);
+			const content = document.getElementById(`scene-${num}`);
+			const isActive = card.classList.contains('active');
+			
+			// 关闭所有其他场景
+			document.querySelectorAll('.story-card').forEach(c=>{
+				c.classList.remove('active');
+				c.querySelector('.story-content').style.display = 'none';
+			});
+			
+			// 切换当前场景
+			if(!isActive){
+				card.classList.add('active');
+				content.style.display = 'block';
+				content.scrollIntoView({behavior:'smooth',block:'start'});
+			}
+		}
+	</script>
 	<script src="app.js"></script>
 </body>
 </html>
