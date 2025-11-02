@@ -54,15 +54,64 @@ function activeNav(){
 
 // Page-specific bootstraps
 function bootstrapIndex(){
+	// Hero carousel
+	const carousel = document.querySelector('.hero-carousel');
+	if(carousel){
+		const slides = carousel.querySelectorAll('.carousel-slide');
+		const prevBtn = document.querySelector('.carousel-btn-prev');
+		const nextBtn = document.querySelector('.carousel-btn-next');
+		let currentIndex = 0;
+		let autoSlideTimer = null;
+		
+		function goToSlide(index){
+			slides[currentIndex].classList.remove('active');
+			currentIndex = index;
+			slides[currentIndex].classList.add('active');
+		}
+		
+		function nextSlide(){
+			goToSlide((currentIndex + 1) % slides.length);
+		}
+		
+		function prevSlide(){
+			goToSlide((currentIndex - 1 + slides.length) % slides.length);
+		}
+		
+		function startAutoSlide(){
+			clearInterval(autoSlideTimer);
+			autoSlideTimer = setInterval(nextSlide, 4000);
+		}
+		
+		function resetAutoSlide(){
+			clearInterval(autoSlideTimer);
+			startAutoSlide();
+		}
+		
+		if(prevBtn){
+			prevBtn.addEventListener('click', ()=>{
+				prevSlide();
+				resetAutoSlide();
+			});
+		}
+		
+		if(nextBtn){
+			nextBtn.addEventListener('click', ()=>{
+				nextSlide();
+				resetAutoSlide();
+			});
+		}
+		
+		startAutoSlide(); // 启动自动轮播
+	}
 	// Showcase emoji strip: load from hardcoded list if present in DOM
 	const strip = document.querySelector('#emoji-strip');
 	if(strip){
 		const sample = [
-			'assets/images/emoji/taotao_01.png',
-			'assets/images/emoji/sisi_01.png',
-			'assets/images/emoji/qiqi_01.png',
-			'assets/images/emoji/taotao_02.png',
-			'assets/images/emoji/sisi_02.png'
+			'images/taotao_01.jpg',
+			'images/sisi_01.jpg',
+			'images/qiqi_01.jpg',
+			'images/taotao_02.jpg',
+			'images/sisi_02.jpg'
 		];
 		sample.forEach(src=>{
 			const img = new Image();
@@ -82,10 +131,10 @@ function bootstrapProducts(){
 	const list = document.querySelector('#product-list');
 	if(!list) return;
 	const products = [
-		{ id:'p1', name:'陶陶·青花杯', price:59, image:'assets/images/products/cup_taotao.png' },
-		{ id:'p2', name:'思思·瓷纹帆布袋', price:89, image:'assets/images/products/tote_sisi.png' },
-		{ id:'p3', name:'琦琦·釉彩挂件', price:49, image:'assets/images/products/charm_qiqi.png' },
-		{ id:'p4', name:'三人·限量拼图', price:129, image:'assets/images/products/puzzle_trio.png' }
+		{ id:'p1', name:'陶陶·青花杯', price:59, image:'images/cup_taotao.jpg' },
+		{ id:'p2', name:'思思·瓷纹帆布袋', price:89, image:'images/tote_sisi.jpg' },
+		{ id:'p3', name:'琦琦·釉彩挂件', price:49, image:'images/charm_qiqi.jpg' },
+		{ id:'p4', name:'三人·限量拼图', price:129, image:'images/puzzle_trio.jpg' }
 	];
 	products.forEach(p=>{
 		const card = document.createElement('div');
