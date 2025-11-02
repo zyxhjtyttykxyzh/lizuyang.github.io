@@ -3,18 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>结算与支付</title>
+	<title>人物小传｜陶陶・思思・琦琦</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="checkout">
+<body>
 	<header class="header">
 		<div class="container nav">
 			<a class="brand" href="index.html"><span>瓷光集</span></a>
 			<nav>
 				<ul>
+					<li><a href="index.html">首页</a></li>
 					<li><a href="characters.html">人物小传</a></li>
-					<li><a href="story.html">三人故事</a></li>
-					<li><a href="products.html">文创周边</a></li>
+					<li><a href="story.html">故事集</a></li>
+					<li><a href="products.html">周边</a></li>
 					<li><a href="emojis.html">表情包</a></li>
 					<li class="cart-pill"><a href="checkout.html">购物车 <span class="cart-count" data-cart-count>0</span></a></li>
 				</ul>
@@ -24,43 +25,141 @@
 
 	<main class="section">
 		<div class="container">
-			<h1>结算与支付</h1>
-			<div id="pay-success" class="card" style="display:none;border-color:#c6f6d5;background:#f0fff4">
-				<div class="body"><strong>支付成功</strong>：感谢你的支持！订单已生成（模拟）。</div>
+			<h1>人物小传</h1>
+			<p class="subtle">文案起点，可在此基础上继续润色与延展。</p>
+
+			<div class="characters-layout">
+				<div class="characters-images">
+					<a href="baisisi.html" class="character-image-link">
+						<img src="images/sisi.png" alt="白思思" onerror="this.style.opacity=.2">
+					</a>
+					<a href="suqiqi.html" class="character-image-link">
+						<img src="images/qiqi.jpg" alt="苏琦琦" onerror="this.style.opacity=.2">
+					</a>
+					<a href="zhongtaotao.html" class="character-image-link">
+						<img src="images/taotao.jpg" alt="钟陶陶" onerror="this.style.opacity=.2">
+					</a>
+				</div>
+				<div class="characters-text">
+					<section id="sisi" class="card character-item">
+						<a href="baisisi.html" class="character-text-link">
+							<div class="body">
+								<h2>白思思 <span class="badge">北宋定窑白瓷瓶</span></h2>
+								<p style="font-size: 16px;">釉色莹白如脂，气质温婉沉静，像位饱读诗书的江南女子，亲历过古代陆上丝路。</p>
+							</div>
+						</a>
+						<a href="baisisi.html" class="close-look-btn">近距离看看</a>
+					</section>
+
+					<section id="qiqi" class="card character-item">
+						<a href="suqiqi.html" class="character-text-link">
+							<div class="body">
+								<h2>苏琦琦 <span class="badge">清代乾隆珐琅彩瓷瓶</span></h2>
+								<p style="font-size: 16px;">满身缠枝莲与西洋花卉纹，色彩浓艳华贵，带着皇城贵女的娇俏，却因困于深宫从未踏出京城走上古丝绸之路。</p>
+							</div>
+						</a>
+						<a href="suqiqi.html" class="close-look-btn">近距离看看</a>
+					</section>
+
+					<section id="taotao" class="card character-item">
+						<a href="zhongtaotao.html" class="character-text-link">
+							<div class="body">
+								<h2>钟陶陶 <span class="badge">18世纪西洋瓷胎飞仙人钟</span></h2>
+								<p style="font-size: 16px;">瓷雕飞仙裙摆飘逸，钟身绘着洛可可花纹，对中国文化充满好奇，说话带着点跳脱的洋派腔调，跟着商船往返过丝路。</p>
+							</div>
+						</a>
+						<a href="zhongtaotao.html" class="close-look-btn">近距离看看</a>
+					</section>
+				</div>
 			</div>
-			<div class="grid" style="grid-template-columns:2fr 1fr;gap:24px">
-				<section class="card">
-					<div class="body">
-						<h2>购物车</h2>
-						<table class="table">
-							<thead>
-								<tr><th>商品</th><th>单价</th><th>数量</th><th>小计</th><th></th></tr>
-							</thead>
-							<tbody id="cart-body"></tbody>
-						</table>
-					</div>
-				</section>
-				<aside class="card">
-					<div class="body">
-						<h2>支付信息</h2>
-						<form id="checkout-form" class="form">
-							<div class="input"><label>收货人</label><input required placeholder="姓名"></div>
-							<div class="input"><label>联系电话</label><input required placeholder="手机号码"></div>
-							<div class="input"><label>收货地址</label><input required placeholder="省市区 + 详细地址"></div>
-							<div class="input"><label>支付方式</label>
-								<select required>
-									<option value="wechat">微信支付（模拟）</option>
-									<option value="alipay">支付宝（模拟）</option>
-								</select>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+			<div>© 瓷光集</div>
+			<div class="links">
+				<a href="support.html">售后服务</a>
+				<a href="emojis.html">表情包</a>
+			</div>
+		</div>
+	</footer>
+	<script src="app.js"></script>
+</body>
+</html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>人物小传｜陶陶・思思・琦琦</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="header">
+		<div class="container nav">
+			<a class="brand" href="index.html"><span>瓷光集</span></a>
+			<nav>
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="characters.html">人物小传</a></li>
+					<li><a href="story.html">故事集</a></li>
+					<li><a href="products.html">周边</a></li>
+					<li><a href="emojis.html">表情包</a></li>
+					<li class="cart-pill"><a href="checkout.html">购物车 <span class="cart-count" data-cart-count>0</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="section">
+		<div class="container">
+			<h1>人物小传</h1>
+			<p class="subtle">文案起点，可在此基础上继续润色与延展。</p>
+
+			<div class="characters-layout">
+				<div class="characters-images">
+					<a href="baisisi.html" class="character-image-link">
+						<img src="images/sisi.png" alt="白思思" onerror="this.style.opacity=.2">
+					</a>
+					<a href="suqiqi.html" class="character-image-link">
+						<img src="images/qiqi.jpg" alt="苏琦琦" onerror="this.style.opacity=.2">
+					</a>
+					<a href="zhongtaotao.html" class="character-image-link">
+						<img src="images/taotao.jpg" alt="钟陶陶" onerror="this.style.opacity=.2">
+					</a>
+				</div>
+				<div class="characters-text">
+					<section id="sisi" class="card character-item">
+						<a href="baisisi.html" class="character-text-link">
+							<div class="body">
+								<h2>白思思 <span class="badge">北宋定窑白瓷瓶</span></h2>
+								<p style="font-size: 16px;">釉色莹白如脂，气质温婉沉静，像位饱读诗书的江南女子，亲历过古代陆上丝路。</p>
 							</div>
-							<div class="input"><label>备注</label><textarea rows="3" placeholder="选填"></textarea></div>
-							<div style="display:flex;align-items:center;justify-content:space-between">
-								<div>应付合计：<strong id="cart-total">¥0.00</strong></div>
-								<button type="submit" class="btn primary">支付</button>
+						</a>
+						<a href="baisisi.html" class="close-look-btn">近距离看看</a>
+					</section>
+
+					<section id="qiqi" class="card character-item">
+						<a href="suqiqi.html" class="character-text-link">
+							<div class="body">
+								<h2>苏琦琦 <span class="badge">清代乾隆珐琅彩瓷瓶</span></h2>
+								<p style="font-size: 16px;">满身缠枝莲与西洋花卉纹，色彩浓艳华贵，带着皇城贵女的娇俏，却因困于深宫从未踏出京城走上古丝绸之路。</p>
 							</div>
-						</form>
-					</div>
-				</aside>
+						</a>
+						<a href="suqiqi.html" class="close-look-btn">近距离看看</a>
+					</section>
+
+					<section id="taotao" class="card character-item">
+						<a href="zhongtaotao.html" class="character-text-link">
+							<div class="body">
+								<h2>钟陶陶 <span class="badge">18世纪西洋瓷胎飞仙人钟</span></h2>
+								<p style="font-size: 16px;">瓷雕飞仙裙摆飘逸，钟身绘着洛可可花纹，对中国文化充满好奇，说话带着点跳脱的洋派腔调，跟着商船往返过丝路。</p>
+							</div>
+						</a>
+						<a href="zhongtaotao.html" class="close-look-btn">近距离看看</a>
+					</section>
+				</div>
 			</div>
 		</div>
 	</main>
